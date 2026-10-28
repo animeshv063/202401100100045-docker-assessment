@@ -27,3 +27,4 @@ Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 2, CRITICAL: 1)
 │ Werkzeug │ CVE-2024-34069 │ CRITICAL │ fixed  │ 2.2.2             │ 3.0.3         │ Werkzeug: Debugger PIN bypass via console evaluation        │
 │ Flask    │ CVE-2023-30861 │ MEDIUM   │ fixed  │ 2.2.2             │ 2.3.2         │ Flask: Cookie leak via improper session handling            │
 └──────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
+
