@@ -17,7 +17,7 @@ Used Gemini (Antigravity) to help debug Dockerfile build errors, format the Dock
 ---
 
 ### 3. Backend Image Digest (v1.0.0)
-`sha256:7f4c391bb4d5e9a08905b63481ccbb3e66a3d129a08a47814b72cf7f79f9024c`
+`sha256:dad5b29e3506c35e0fd222736f4d4ef25d21b219acdd73f7bb41d59996ca8e0d`
 
 ---
 
