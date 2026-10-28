@@ -5,7 +5,6 @@
 - **Class:** CS - A
 - **Registration Number:** 202401100100045
 - **Assigned Port:** 8045 (calculated using rule: 80 + last 2 digits of REGNO -> 80 + 45 = 8045)
-- **Local Application URL:** http://localhost:8045
 - **Docker Hub Username:** animeshv063
 - **Docker Hub Link:** https://hub.docker.com/r/animeshv063/fest-backend
 
