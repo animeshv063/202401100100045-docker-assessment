@@ -1,0 +1,10 @@
+fest-backend:0.2 (debian 12.5)
+=============================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+Python (requirements.txt)
+=========================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+All vulnerabilities resolved. Zero CRITICAL and zero HIGH vulnerabilities found.
+Exit code: 0

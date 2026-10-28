@@ -1,0 +1,29 @@
+fest-backend:0.1 (debian 11.9)
+=============================
+Total: 216 (UNKNOWN: 0, LOW: 112, MEDIUM: 64, HIGH: 32, CRITICAL: 8)
+
+┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │      Fixed Version      │                            Title                            │
+├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ curl             │ CVE-2023-38545 │ CRITICAL │ fixed  │ 7.74.0-1.3+deb11u7│ 7.74.0-1.3+deb11u10     │ curl: SOCKS5 heap buffer overflow                           │
+│ libcurl4         │ CVE-2023-38545 │ CRITICAL │ fixed  │ 7.74.0-1.3+deb11u7│ 7.74.0-1.3+deb11u10     │ curl: SOCKS5 heap buffer overflow                           │
+│ glibc            │ CVE-2023-6246  │ CRITICAL │ fixed  │ 2.31-13+deb11u7   │ 2.31-13+deb11u8         │ glibc: heap-based buffer overflow in __vsyslog_internal()   │
+│ glibc            │ CVE-2023-4911  │ CRITICAL │ fixed  │ 2.31-13+deb11u7   │ 2.31-13+deb11u8         │ glibc: Buffer overflow in ld.so leading to privilege esc    │
+│ openssl          │ CVE-2022-3602  │ CRITICAL │ fixed  │ 1.1.1n-0+deb11u3  │ 1.1.1n-0+deb11u5        │ openssl: X.509 Email Address 4-byte Buffer Overflow         │
+│ openssl          │ CVE-2023-0286  │ HIGH     │ fixed  │ 1.1.1n-0+deb11u3  │ 1.1.1n-0+deb11u5        │ openssl: X.400 address type confusion in GENERAL_NAME_cmp   │
+│ libssl1.1        │ CVE-2023-0286  │ HIGH     │ fixed  │ 1.1.1n-0+deb11u3  │ 1.1.1n-0+deb11u5        │ openssl: X.400 address type confusion in GENERAL_NAME_cmp   │
+│ zlib1g           │ CVE-2022-37434 │ CRITICAL │ fixed  │ 1:1.2.11.dfsg-2   │ 1:1.2.11.dfsg-2+deb11u2 │ zlib: heap-based buffer over-read in inflate() in inflate.c │
+└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────────────┴─────────────────────────────────────────────────────────────┘
+
+Python (requirements.txt)
+=========================
+Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 2, CRITICAL: 1)
+
+┌──────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│ Library  │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                            │
+├──────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ Werkzeug │ CVE-2023-25577 │ HIGH     │ fixed  │ 2.2.2             │ 2.2.3         │ Werkzeug: High memory consumption when parsing multipart form│
+│ Werkzeug │ CVE-2023-46136 │ HIGH     │ fixed  │ 2.2.2             │ 3.0.1         │ Werkzeug: High resource consumption in multipart parser     │
+│ Werkzeug │ CVE-2024-34069 │ CRITICAL │ fixed  │ 2.2.2             │ 3.0.3         │ Werkzeug: Debugger PIN bypass via console evaluation        │
+│ Flask    │ CVE-2023-30861 │ MEDIUM   │ fixed  │ 2.2.2             │ 2.3.2         │ Flask: Cookie leak via improper session handling            │
+└──────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
