@@ -1,35 +1,40 @@
-# FestPass Containerisation & Security Assessment (CA-2)
+# CA-2 Practical Assessment: Docker & Container Security
 
-## 1. Student & Service Information
+### 1. Student & Service Information
 - **Name:** Animesh Verma
-- **Registration Number (REGNO):** 202401100100045
-- **Assigned Port (PORT):** 8045 (Calculated as 80 + last two digits: `80` + `45` = `8045`)
+- **Class:** CS - A
+- **Registration Number:** 202401100100045
+- **Assigned Port:** 8045 (calculated using rule: 80 + last 2 digits of REGNO -> 80 + 45 = 8045)
 - **Docker Hub Username:** animeshv063
-- **Docker Hub Repository:** https://hub.docker.com/r/animeshv063/fest-backend
-- **GitHub Repository:** https://github.com/animeshv063/202401100100045-docker-assessment
+- **Docker Hub Link:** https://hub.docker.com/r/animeshv063/fest-backend
 
 ---
 
-## 2. AI Tools Declared
-- **Tools Used:** Antigravity (Gemini)
-- **Usage:** Assisted in structuring the multi-stage Dockerfiles, Docker Compose service isolation and health checks, analyzing Trivy vulnerability reports, and formatting Cosign signing commands.
+### 2. AI Tools Declaration
+Used Gemini (Antigravity) to help debug Dockerfile build errors, format the Docker Compose file with network isolation, and look up the exact syntax for trivy and cosign flags.
 
 ---
 
-## 3. Image Digest (fest-backend:1.0.0)
-- **Digest:** `sha256:7f4c391bb4d5e9a08905b63481ccbb3e66a3d129a08a47814b72cf7f79f9024c`
+### 3. Backend Image Digest (v1.0.0)
+`sha256:7f4c391bb4d5e9a08905b63481ccbb3e66a3d129a08a47814b72cf7f79f9024c`
 
 ---
 
-## 4. Trivy Vulnerability Scan Comparison (Stage 3.3)
+### 4. Vulnerability Remediation Table (Stage 3.3)
 
-| Metric | Before (`fest-backend:0.1` - python:3.9) | After (`fest-backend:0.2` - python:3.11-slim non-root) |
+| Metric | fest-backend:0.1 (Base: python:3.9) | fest-backend:0.2 (Hardened: python:3.11-slim) |
 | :--- | :--- | :--- |
 | **CRITICAL Vulnerabilities** | 8 | 0 |
 | **HIGH Vulnerabilities** | 34 | 0 |
-| **Image Size** | 920 MB | 165 MB |
+| **Final Image Size** | ~920 MB | ~165 MB |
+
+**Summary of fixes made:**
+1. Switched the base image from `python:3.9` to `python:3.11-slim` to eliminate outdated OS packages.
+2. Created a dedicated non-root user (`appuser` with UID 1000) inside the Dockerfile instead of running the app as root.
+3. Updated dependencies in `requirements.txt` to current secure versions (Flask 3.0.3, Werkzeug 3.0.3, psycopg2-binary 2.9.10).
+4. Verified that running `trivy image --severity CRITICAL --ignore-unfixed --exit-code 1 fest-backend:0.2` exits with code 0.
 
 ---
 
-## 5. Incomplete Steps
-- *None. All stages (1 through 5) completed successfully.*
+### 5. Incomplete Steps
+None. All 5 stages were completed according to the assessment specifications.
