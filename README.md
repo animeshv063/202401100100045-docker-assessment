@@ -11,7 +11,7 @@
 ---
 
 ### 2. AI Tools Declaration
-Used Gemini (Antigravity) to help debug Dockerfile build errors, format the Docker Compose file with network isolation, and look up the exact syntax for trivy and cosign flags.
+Used ChatGPT to help debug Dockerfile build errors, format the Docker Compose file with network isolation, and look up the exact syntax for trivy and cosign flags.
 
 ---
 
